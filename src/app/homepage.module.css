@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital@1&display=swap');
+
+@font-face {
+    font-family: "Segment A Key Trial Black", sans-serif;
+    src: url("/font/SegmentAKeyTrial-Black.otf");
+}
+
+.backgroundImg {
+    font-family: "Alumni Sans", sans-serif;
+    background-image: url("/images/Background.png");
+    background-color: black;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-left: -20px;
+    margin-top: -20px;
+    
+}
+
+.header1 {
+    margin-top: -6vw;
+    position: fixed;
+    font-family: "Segment A Key Trial Black", sans-serif;
+    font-size: 18vw;
+    font-style: italic;
+    text-align: right;
+    padding-right: 5vw;
+    letter-spacing: 2vw;
+    top: 0vh;
+    left: 25vw;
+    background: linear-gradient(to bottom, #fff, #000);
+    /* 渐变色 */
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0.3vw 0.3vw 0 white);
+}
+
+.Mydiv {
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    top: 28vh;
+    left: 20vw;
+}
+
+.image {
+    position: absolute;
+    left: 35vw;
+    width: 29vw;
+    top: 0vh;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: red;
+}
+
+
+.container {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the content is centered vertically */
+    color: white;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+}

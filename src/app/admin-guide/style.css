@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    transition: background-image 0.5s ease-in-out;
+  }
+  
+  .swiper-container {
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    top: 5vh;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0)50%, rgba(255, 255, 255, 0.8));
+  }
+  
+  .swiper-container>.swiper-slide__content {
+    position: absolute;
+    top: 0;
+  }
+  
+  .swiper-slide {
+    top: 0vh;
+    height: 20vh;
+    width: 38vh;
+    display: flex;
+    /* background: #eee; */
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms ease-in-out;
+    transform: scale(0.8);
+  }
+  
+  .swiper-slide.swiper-slide-active {
+    transform: scale(1);
+    /* background: #fc0; */
+    filter: drop-shadow(0vw 0vw 3vw lightcoral);
+  }
+  
+  .swiper-slide.swiper-slide-active img {
+    filter: drop-shadow(0vw 0vw 2vw white);
+    filter: brightness(100%);
+  }
+  
+  
+  .swiper-slide__content {
+    height: 20vh;
+  }
+  
+  .swiper-container img {
+    height: 20vh;
+    width: 35vh;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: filter 0.5s ease;
+  }
+  
+  .place-name img {
+    margin-top: -45vh;
+    margin-left: -50vw;
+    position: fixed;
+    width: 40vw;
+    filter: drop-shadow(0vw 0vw 1vw white);
+  }
+  
+  .swiper-button-prev img {
+    width: 80px;
+    height: auto;
+    margin-left: -0.2vw;
+    margin-top: -1vh;
+    filter: drop-shadow(0vw 0vw 5vw white);
+  }
+  
+  .swiper-button-next img {
+    width: 80px;
+    height: auto;
+    margin-left: 0vw;
+    margin-top: -1vh;
+    filter: drop-shadow(0vw 0vw 5vw white);
+  }
+  
+  .center-line img {
+    position: fixed;
+    margin-left: -55vw;
+    margin-top: 3vh;
+    width: 70vw;
+  }
+  
+  .route img {
+    position: fixed;
+    width: 30vw;
+    left: 65vw;
+    bottom: 10vh;
+  }
+  
+  .character-container {
+    display: flex;
+    position: fixed;
+    gap: 1vw;
+    top: 60vh;
+    left: 5vw;
+  }
+  
+  .character img {
+    width: 10vw;
+    filter: brightness(50%);
+    /* 降低亮度 */
+    transition: filter 0.3s ease-in-out;
+    /* 平滑過渡效果 */
+  }
+  
+  .character img:hover {
+    filter: brightness(100%);
+    /* 恢復原來亮度 */
+  }
+  
+  .music-player iframe {
+    zoom: 0.8;
+    border: none;
+    width: 38vw;
+    height: 40vh;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .music-player iframe:hover {
+    transform: translateY(-12vh);
+    /* 上移 */
+    transition: ease-in-out 0.5s;
+  }
+  
+  .music-player {
+    display: flex;
+    position: fixed;
+    left: 0vw;
+    /* 距离右侧的距离 */
+    bottom: 0vh;
+    /* 距离底部的距离 */
+    margin-left: 0vw;
+    margin-bottom: -16.3vh;
+    margin-top: 0;
+  }

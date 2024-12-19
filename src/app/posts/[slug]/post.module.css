@@ -1,0 +1,17 @@
+.container{
+    /* background-color: black;
+    color: white; */
+}
+
+#blurred{
+    top: 2vw;
+    position: absolute;
+    /* align-self: center; */
+    filter: blur(100px);
+    width: 130%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    opacity: 0.5;
+    display: flex;
+    align-items: flex-start;
+  }

@@ -1,0 +1,27 @@
+{
+    "characters" : [
+    {
+        "image": "../../images/character/Takumi_Fujiwara.png",
+        "name": "藤原拓海",
+        "car": "1983 Toyota Sprinter Trueno 3-Door GT-APEX (AE86)",
+        "description": "故事主角，Project D 的下山擔任。"
+    },
+    {
+        "image": "../../images/character/Keisuke_Takahashi.png",
+        "name": "高橋啟介",
+        "car": "1991 Mazda Ẽfini RX-7 Type R（FD3S）",
+        "description": "Project D 的上山擔任。"
+    },
+    {
+        "image": "../../images/character/Ryosuke_Takahashi.png",
+        "name": "高橋涼介",
+        "car": "1990 Mazda Savanna RX-7 ∞ III（FC3S）",
+        "description": "Project D 的隊長。"
+    },
+    {
+        "image": "../../images/character/Kenta_Nakamura.png",
+        "name": "中村賢太",
+        "car": "1993 Nissan Silvia Q's (S14)",
+        "description": "Project D 的視察人員。"
+    }
+]}
