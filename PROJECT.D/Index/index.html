@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital@1&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital@1&display=swap');
+
+        @font-face {
+            font-family: "Segment A Key Trial Black", sans-serif;
+            src: url(Font\SegmentAKeyTrial-Black.otf);
+        }
+
+        body {
+            font-family: "Alumni Sans", sans-serif;
+            background-image: url("Background.png");
+            background-color: black;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: -6vw;
+            position: fixed;
+            font-family: "Segment A Key Trial Black", sans-serif;
+            font-size: 18vw;
+            font-style: italic;
+            text-align: right;
+            padding-right: 5vw;
+            letter-spacing: 2vw;
+            top: 0vh;
+            left: 25vw;
+            background: linear-gradient(to bottom, #fff, #000);
+            /* 渐变色 */
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+
+            filter: drop-shadow(0.3vw 0.3vw 0 white);
+        }
+
+        div {
+            color: white;
+            font-size: 3vw;
+            position: absolute;
+            top: 28vh;
+            left: 20vw;
+        }
+
+        img {
+            position: absolute;
+            left: 35vw;
+            width: 29vw;
+            top: 0vh;
+        }
+
+        p:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="Kanto map.png"></div>
+    <div>
+        <p>PROJECT.D</p>
+        <p>MEMBER PROFILE</p>
+        <p>SHOWROOM</p>
+        <p id="guide">RACING GUIDE</p>
+        <p>CREDIRS</p>
+    </div>
+    <h1>PROJECT.D</h1>
+    <script>
+        document.getElementById('guide').addEventListener('click', function () {
+            window.location.href = '../Racing Guide/Admin\'s Guide.html';
+        });
+    </script>
+</body>
+
+</html>
