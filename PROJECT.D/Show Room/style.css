@@ -1,0 +1,115 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("background/showroom background.jpg");
+  background-color: black;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.swiper-container {
+  position: absolute;
+  width: 100vw;
+  height: 20vh;
+  top: 5vh;
+  background: 
+    linear-gradient(to left, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%),
+    radial-gradient(ellipse, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.6) 80%), 
+    url("background/swiper background.png");
+  background-size: cover; /* 調整背景圖片的顯示方式 */
+  background-position: center; /* 背景圖片居中 */
+}
+
+
+.swiper-container>.swiper-slide__content {
+  position: absolute;
+  top: 0;
+}
+
+.swiper-slide {
+  top: 0vh;
+  height: 20vh;
+  width: 50vw;
+  display: flex;
+  /* background: #eee; */
+  align-items: center;
+  justify-content: center;
+  transition: all 50ms ease-in;
+  opacity: 0;
+  /* transform: scale(0.8); */
+}
+
+.swiper-slide.swiper-slide-active {
+  opacity: 1;
+  /* transform: scale(1); */
+  /* background: #fc0; */
+}
+
+.swiper-slide.swiper-slide-active img {
+  filter: drop-shadow(0vw 0vw 2vw white);
+  filter: brightness(100%);
+}
+
+
+.swiper-slide__content {
+  height: 20vh;
+}
+
+.swiper-container img {
+  height: 50vh;
+  width: 100vw;
+  zoom: 0.3;
+  object-fit: contain;
+}
+
+.swiper-button-prev img {
+  width: 80px;
+  height: auto;
+  margin-left: -0.2vw;
+  margin-top: -1vh;
+  filter: drop-shadow(0vw 0vw 5vw white);
+}
+
+.swiper-button-next img {
+  width: 80px;
+  height: auto;
+  margin-left: 0vw;
+  margin-top: -1vh;
+  filter: drop-shadow(0vw 0vw 5vw white);
+}
+
+.cars-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+  row-gap: 0;
+  position: fixed;
+  top: 30vh;
+  left: 15vw;
+}
+
+.Cars:nth-child(n+4) {
+  margin-left: -5vw; /* Left shift for elements in the second row and beyond */
+}
+.Cars:nth-child(n+7) {
+  margin-left: -10vw; /* Left shift for elements in the second row and beyond */
+}
+
+.Cars img {
+  width: 25vw;
+  margin-top: -5vw;
+}
+
+.CarLabel {
+  color: #fff;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2vw;
+  margin-left: -3vw;
+  text-align: left;
+}
