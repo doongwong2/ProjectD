@@ -1,6 +1,5 @@
 import prisma from "@/utils/connect";
 import { NextResponse } from "next/server"
-import { use } from 'react'
 
 export const GET = async (req) => {
 
@@ -10,7 +9,7 @@ export const GET = async (req) => {
 
     try {
         const post = await prisma.post.findUnique({
-            where: { slug:slug },
+            where: { slug: slug },
 
         })
         return new NextResponse(
