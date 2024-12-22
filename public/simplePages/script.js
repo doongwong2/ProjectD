@@ -143,3 +143,9 @@ $(document).ready(function () {
   updateCharacter(mySwiper.activeIndex);
 
 });
+
+var loadingScreen = document.querySelector(".loadingScreen");
+
+setTimeout(function () {
+  loadingScreen.style.display = 'none';
+}, 3000);
