@@ -139,3 +139,7 @@ function updateCarInfo(imagePath) {
 iniSwiper(passedIndex);
 
 
+
+
+
+

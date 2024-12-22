@@ -152,7 +152,7 @@ $(function () {
       // tProgress.text("00:00");
       // albumArt.removeClass("buffering").removeClass("active");
       // clearInterval(buffInterval);
-      selectTrack(1); 
+      selectTrack(1);
     }
   }
 
@@ -219,6 +219,8 @@ $(function () {
   function initPlayer() {
     audio = new Audio();
 
+    audio.volume = 0.1;
+
     selectTrack(0);
 
     audio.loop = false;
@@ -242,9 +244,9 @@ $(function () {
       selectTrack(1);
     });
 
-    setTimeout(function(){
+    setTimeout(function () {
       playPauseButton.trigger("click");
-    },3000);
+    }, 3000);
   }
 
   initPlayer();
