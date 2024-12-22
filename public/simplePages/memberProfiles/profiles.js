@@ -206,14 +206,19 @@ function generateTable(start, end, id) {
 
         // Add the image cell (rowspan = 3)
         const imgCell = document.createElement('td');
+        imgCell.setAttribute('width','5vw');
         imgCell.setAttribute('rowspan', '3');
         const img = document.createElement('img');
         img.setAttribute('src', character.image);
         imgCell.appendChild(img);
         row1.appendChild(imgCell);
 
+        const titleStyle = 'width: 3vw; padding: 3px; font-weight: bold;';
+        const valueStyle = 'padding: 8px;';
+
         // Add the "名字" cell and value
         const nameCell = document.createElement('td');
+        nameCell.style.cssText = titleStyle;
         nameCell.textContent = "名字";
         row1.appendChild(nameCell);
         const nameValueCell = document.createElement('td');
@@ -222,6 +227,7 @@ function generateTable(start, end, id) {
 
         // Add the "車種" cell and value
         const carCell = document.createElement('td');
+        carCell.style.cssText = titleStyle;
         carCell.textContent = "車種";
         row2.appendChild(carCell);
         const carValueCell = document.createElement('td');
@@ -230,6 +236,7 @@ function generateTable(start, end, id) {
 
         // Add the "説明" cell and value
         const descriptionCell = document.createElement('td');
+        descriptionCell.style.cssText = titleStyle;
         descriptionCell.textContent = "説明";
         row3.appendChild(descriptionCell);
         const descriptionValueCell = document.createElement('td');

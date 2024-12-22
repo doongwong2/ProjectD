@@ -46,6 +46,10 @@
     left: 20vw;
 }
 
+.Mydiv p{
+    margin-bottom: 5vh;
+}
+
 .image {
     position: absolute;
     right: 15vw;

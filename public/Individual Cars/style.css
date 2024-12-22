@@ -68,3 +68,55 @@ body {
   object-fit: contain;
   margin-left: 10vw;
 }
+
+.car-info-bar {
+  position: fixed;
+  bottom: 2vh;
+  right: 0;
+  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 100%);
+  padding: 8px 15px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 2px;
+  width: 80vw;
+  height: 7vh;
+}
+
+.car-info-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5vw;
+  width: 5vw;  /* Width of the cut */
+  height: 100%;
+  background: #000;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0);
+}
+
+.car-name {
+  color: white;
+  font-weight: bold;
+  width: 55vw;
+  margin-left: 2vw;
+}
+
+.divider {
+  margin-top: -0.8vh;
+  color: #444;
+  width: 0.5vw;
+  height: 125%;
+  background-color: #444;
+  align-self: stretch;
+}
+
+.transmission, .gear-count {
+  color: #fff;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  -webkit-text-stroke: 0.5vw #000;
+  paint-order: stroke fill;
+}

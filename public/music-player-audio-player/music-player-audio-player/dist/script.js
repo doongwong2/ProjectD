@@ -14,19 +14,19 @@ $(function () {
   const tTime = $("#track-length");
   const playPreviousTrackButton = $("#play-previous");
   const playNextTrackButton = $("#play-next");
-  const albums = ["DOGFIGHT", "Speedy Speed Boy", "REMEMBER ME", "Proxy (Original Mix)"];
+  const albums = ["DOGFIGHT", "Speedy Speed Boy", "REMEMBER ME", "SAVE ME"];
   const trackNames = [
     "m.o.v.e - DOGFIGHT",
     "Marko Polo - Speedy Speed Boy",
     "LESLIE PARRISH - REMEMBER ME",
-    "Martin Garrix - Proxy"
+    "LESLIE PARRISH - SAVE ME"
   ];
   const albumArtworks = ["_2", "_3", "_4", "_5"];
   const trackUrl = [
     "../track/DOGFIGHT.mp3",
     "../track/Speedy Speed Boy (Extended mix).mp3",
     "../track/REMEMBER ME.mp3",
-    "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
+    "../track/SAVE ME.mp3"
   ];
 
   let bgArtworkUrl,
