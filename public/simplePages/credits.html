@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: #fff;
+            font-family: "Arial", sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .credits-container {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .credits {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            animation: scroll 60s linear infinite;
+            white-space: pre-line;
+            font-size: 24px;
+            line-height: 2;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .role {
+            font-size: 28px;
+            margin-top: 30px;
+            color: #fff;
+        }
+
+        .name {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="credits-container">
+        <div class="credits">
+            <div class="title">期末專案製作團隊</div>
+
+            <div class="role">UI 設計</div>
+            <div class="name">斅民</div>
+
+            <div class="role">設計還原和收集素材</div>
+            <div class="name">斅民</div>
+
+            <div class="role">架構設計</div>
+            <div class="name">偉棟</div>
+
+            <div class="role">後端程式</div>
+            <div class="name">斅民<br>偉棟</div>
+
+            <div class="role">文件準備</div>
+            <div class="name">斅民<br>偉棟</div>
+
+            <div class="role">網站部署</div>
+            <div class="name">偉棟</div>
+
+            <div class="role">報告</div>
+            <div class="name">斅民<br>偉棟</div>
+
+            <div style="margin-top: 50px">
+                <div class="role">© 2024</div>
+                <div class="name">感謝觀看</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
