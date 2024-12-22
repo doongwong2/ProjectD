@@ -57,7 +57,7 @@ const PostPage = () => {
           <div className={styles.wrapper}>
           </div>
           <video ref={videoRef} autoPlay loop muted width={900} controls style={{ marginTop: '50px' }}>
-            <source src="\youtube-ambient-mode\youtube-ambient-mode\dist\Video\Initial D_ Street Stage - Part 1 - Itsuki Takeuchi (ENG SUB).mp4" type="video/mp4" />
+            <source src={postData.video} type="video/mp4" />
           </video>
         </div>
 
