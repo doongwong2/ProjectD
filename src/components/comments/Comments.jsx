@@ -73,10 +73,11 @@ const Comments = ({ postSlug }) => {
                                     </div>
                                 </div>
                                 <p className={styles.desc}>{item.desc}
+                                    <br></br>
                                     {item.url && extractYoutubeId(item.url) ? (
                                         <iframe
-                                            width="230"
-                                            height="150"
+                                            width="560"
+                                            height="315"
                                             src={`https://youtube.com/embed/${extractYoutubeId(item.url)}`}
                                             title="Youtube Video Player"
                                             frameBorder="0"
