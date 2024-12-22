@@ -1,15 +1,22 @@
 
 body {
+
     padding-left: 20px;
     padding-top: 20px;
     font-family:"Noto Sans TC",sans-serif;
     background-color: rgb(19, 19, 19);
     color:white;
+
 }
 
 img {
+
     max-height: 500px;
     max-width: 500px;
+}
+
+div {
+    justify-items: center;
 }
 
 table {

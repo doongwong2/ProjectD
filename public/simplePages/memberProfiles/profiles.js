@@ -256,5 +256,3 @@ generateTable(18, 20, "Irohazaka");
 generateTable(21, 23, "Happogahara");
 generateTable(24, 26, "Shomaru");
 generateTable(27, 30, "Tsuchisaka");
-
-

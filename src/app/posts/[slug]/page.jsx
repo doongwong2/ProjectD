@@ -2,14 +2,10 @@
 "use client"; // This is needed for client-side rendering.
 
 import { useParams } from 'next/navigation';
-import { useEffect, useState, use } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Comments from '@/components/comments/Comments';
 import AuthLinks from '@/components/authLinks/AuthLinks';
 import styles from './post.module.css';
-
-const lastViewed = () => {
-  localStorage.setItem('redirectURL', window.location.href);
-}
 
 const PostPage = () => {
   const params = useParams()
@@ -19,6 +15,10 @@ const PostPage = () => {
 
   const [postData, setPostData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const videoRef = useRef(null);
+  const blurredVideoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
 
   // This is where we use the use() hook to resolve the dynamic `slug` parameter asynchronously
   useEffect(() => {
@@ -46,15 +46,22 @@ const PostPage = () => {
 
   if (!postData) return <div>No post found</div>; // Show error state if no data
 
-  lastViewed();
   return (
     <div>
       <div className={styles.container}>
         <h1>{postData.title}</h1>
-        <video controls src="\youtube-ambient-mode\youtube-ambient-mode\dist\Video\Initial D_ Street Stage - Part 1 - Itsuki Takeuchi (ENG SUB).mp4#t=222,424" id="blurred"></video>
-        <iframe width="1020" height="630" src="https://www.youtube.com/embed/-lje9ONK3HI?si=FCk8uO8tvyXhnqgL&amp;start=193" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-        <br></br>
-        <a href={postData.desc}>video link</a>
+        {/* <video ref={blurredVideoRef} autoPlay loop muted className={styles.blurred}>
+          <source src="\youtube-ambient-mode\youtube-ambient-mode\dist\Video\Initial D_ Street Stage - Part 1 - Itsuki Takeuchi (ENG SUB).mp4" type="video/mp4" />
+        </video> */}
+        <div>
+          <div className={styles.wrapper}>
+          </div>
+          <video ref={videoRef} autoPlay loop muted width={900} controls style={{ marginTop: '50px' }}>
+            <source src="\youtube-ambient-mode\youtube-ambient-mode\dist\Video\Initial D_ Street Stage - Part 1 - Itsuki Takeuchi (ENG SUB).mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <a href={postData.desc} className={styles.desc}>Yt video Link</a>
         <Comments postSlug={slug}></Comments>
         <AuthLinks></AuthLinks>
       </div>
