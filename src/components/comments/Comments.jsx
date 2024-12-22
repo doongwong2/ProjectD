@@ -8,6 +8,12 @@ import useSWR from 'swr'
 import { useSession } from 'next-auth/react'
 import { useState } from 'react'
 
+const extractYoutubeId = (url) => {
+    const regExp = /^.*(youtu.be\/|v\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length === 11) ? match[2] : null;
+}
+
 const fetcher = async (url) => {
     const res = await fetch(url);
     console.log(res)
@@ -31,11 +37,12 @@ const Comments = ({ postSlug }) => {
     console.log(postSlug);
 
     const [desc, setDesc] = useState("")
+    const [url, setUrl] = useState("")
 
     const handleSubmit = async () => {
         await fetch("/api/comments", {
             method: "POST",
-            body: JSON.stringify({ desc, postSlug })
+            body: JSON.stringify({ desc, url, postSlug })
         })
         mutate();
     }
@@ -46,6 +53,7 @@ const Comments = ({ postSlug }) => {
             {status === "authenticated"
                 ? (<div className={styles.write}>
                     <textarea placeholder='write a comment' className={styles.input} onChange={e => setDesc(e.target.value)} />
+                    <textarea type="text" placeholder="URL (optional)" className={styles.input} value={url} onChange={e => setUrl(e.target.value)} />
                     <button className={styles.button} onClick={handleSubmit}>Send</button>
                 </div>)
                 : (<Link href="/login">Login to comment.</Link>)}
@@ -64,7 +72,33 @@ const Comments = ({ postSlug }) => {
                                         <span className={styles.date}>{item.createdAt.substring(0, 10)}</span>
                                     </div>
                                 </div>
-                                <p className={styles.desc}>{item.desc}</p>
+                                <p className={styles.desc}>{item.desc}
+                                    {item.url && extractYoutubeId(item.url) ? (
+                                        <iframe
+                                            width="230"
+                                            height="150"
+                                            src={`https://youtube.com/embed/${extractYoutubeId(item.url)}`}
+                                            title="Youtube Video Player"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            className={styles.video}
+                                        >
+                                        </iframe>
+                                    ) : (
+                                        item.url && (
+                                            <a
+                                                href={item.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={styles.link}
+                                            >
+                                                My Video Link
+                                            </a>
+                                        )
+                                    )}
+
+                                </p>
                             </div>)
                     })}
             </div>
