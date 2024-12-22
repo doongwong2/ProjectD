@@ -26,7 +26,7 @@
             position: absolute;
             width: 100%;
             text-align: center;
-            animation: scroll 60s linear infinite;
+            animation: scroll 40s linear forwards;
             white-space: pre-line;
             font-size: 30px;
             line-height: 2;
@@ -59,12 +59,17 @@
                 transform: translateY(100vh);
             }
             to {
-                transform: translateY(-100%);
+                transform: translateY(calc(-100% + 650px));
             }
         }
     </style>
 </head>
 <body>
+    <audio id="bgMusic" loop>
+        <source src="..\music-player-audio-player\music-player-audio-player\track\Rage your dream tv mix.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="credits-container">
         <div class="credits">
             <div class="title">PROJECT.<span>D</span></div>
@@ -96,5 +101,24 @@
             </div>
         </div>
     </div>
+
+    <script>
+        window.onload = function() {
+            const audio = document.getElementById('bgMusic');
+            audio.volume = 0.5;  // 設置音量為 0.5
+            
+            // 為了處理自動播放政策，我們需要等待用戶互動
+            document.body.addEventListener('click', function() {
+                audio.play().catch(function(error) {
+                    console.log("Audio autoplay failed:", error);
+                });
+            });
+
+            // 嘗試自動播放
+            audio.play().catch(function(error) {
+                console.log("Audio autoplay failed, waiting for user interaction:", error);
+            });
+        }
+    </script>
 </body>
 </html>
