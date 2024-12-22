@@ -1,5 +1,7 @@
 .container{
     margin-top: 50px;
+    width:900px;
+    height:100%;
 }
 
 .wrapper {
@@ -15,7 +17,7 @@
 
 .input {
     font-family: "Alumni Sans", sans-serif;
-    width: 150px;
+    width: 400px;
     height: 150px;
 }
 
@@ -31,6 +33,7 @@
 
 .comments {
     margin-top: 50px;
+    text-align: left;
 }
 
 .comment {
