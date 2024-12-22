@@ -244,9 +244,9 @@ $(function () {
       selectTrack(1);
     });
 
-    // setTimeout(function () {
-    //   playPauseButton.trigger("click");
-    // }, 3000);
+    setTimeout(function () {
+      playPauseButton.trigger("click");
+    }, 6000);
   }
 
   initPlayer();

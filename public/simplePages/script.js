@@ -148,4 +148,4 @@ var loadingScreen = document.querySelector(".loadingScreen");
 
 setTimeout(function () {
   loadingScreen.style.display = 'none';
-}, 3000);
+}, 5000);
