@@ -102,3 +102,9 @@ $(document).ready(function () {
 
   updateCars(mySwiper.activeIndex);
 });
+
+var loadingScreen = document.querySelector(".loadingScreen");
+
+setTimeout(function () {
+  loadingScreen.style.display = 'none';
+}, 1000);
