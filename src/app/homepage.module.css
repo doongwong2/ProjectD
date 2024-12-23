@@ -61,10 +61,22 @@
 .link {
     color: white;
     text-decoration: none;
+    position: relative;
+    text-shadow: 
+            -20px 15px 30px rgba(255, 255, 255, 0.5),
+            8px 15px 30px rgba(255, 255, 255, 0.5),
+            40px 15px 30px rgba(255, 255, 255, 0.5),
+            80px 15px 30px rgba(255, 255, 255, 0.5),
+            120px 15px 30px rgba(255, 255, 255, 0.5);
 }
 
 .link:hover {
-    color: red;
+    text-shadow: 
+            -20px 15px 30px rgba(255, 0, 0, 0.9),
+            8px 15px 30px rgba(255, 0, 0, 0.9),
+            40px 15px 30px rgba(255, 0, 0, 0.9),
+            80px 15px 30px rgba(255, 0, 0, 0.9),
+            120px 15px 30px rgba(255, 0, 0, 0.9);
 }
 
 
