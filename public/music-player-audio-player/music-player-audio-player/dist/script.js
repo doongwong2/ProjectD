@@ -246,7 +246,7 @@ $(function () {
 
     setTimeout(function () {
       playPauseButton.trigger("click");
-    }, 6000);
+    }, 4000);
   }
 
   initPlayer();

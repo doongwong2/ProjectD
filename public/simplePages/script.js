@@ -157,4 +157,4 @@ var loadingScreen = document.querySelector(".loadingScreen");
 
 setTimeout(function () {
   loadingScreen.style.display = 'none';
-}, 5000);
+}, 2000);
