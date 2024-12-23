@@ -116,6 +116,7 @@ body {
 
 .character img:hover {
   filter: brightness(100%);
+  cursor: pointer;
   /* 恢復原來亮度 */
 }
 

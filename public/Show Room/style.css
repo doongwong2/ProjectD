@@ -104,6 +104,10 @@ body {
   margin-top: -5vw;
 }
 
+.Cars img:hover{
+  cursor: pointer;
+}
+
 .CarLabel {
   color: #fff;
   font-style: italic;
