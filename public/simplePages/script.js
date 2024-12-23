@@ -38,13 +38,70 @@ $(document).ready(function () {
     "../images/Route/Tsuchisaka.png"
   ];
 
-  // backgrounds.forEach((imagePath) => {
-  //   const img = new Image();
-  //   img.src = imagePath;
-  // });
+  const character = new Array();
+  character[0] = [
+    "/images/character/Itsuki_Takeuchi.png",
+    "/images/character/Kenji.png",
+    "/images/character/Shingo_Shoji.png"
+  ];
+  character[1] = [
+    "/images/character/Toru_Suetsugu.png",
+    "/images/character/Atsuro_Kawai.png",
+    "/images/character/Impact_Blue.png"
+  ];
+  character[2] = [
+    "/images/character/Two_Guys_From_Tokyo.png",
+    "/images/character/Kenta_Nakamura.png",
+    "/images/character/Keisuke_Takahashi.png"
+  ];
+  character[3] = [
+    "/images/character/Koichiro_Iketani.png",
+    "/images/character/Takeshi_Nakazato.png",
+    "/images/character/Kyoichi_Sudo.png",
+    "/images/character/Ryosuke_Takahashi.png",
+    "/images/character/Takumi_Fujiwara.png"
+  ];
+  character[4] = [
+    "/images/character/Seiji_Iwaki.png",
+    "/images/character/Kyoichi_Sudo.png",
+    "/images/character/Kai_Kogashiwa.png"
+  ];
+  character[5] = [
+    "/images/character/Daiki_Ninomiya.png",
+    "/images/character/Smiley_Sakai.png",
+    "/images/character/Tomoyuki_Tachi.png"
+  ];
+  character[6] = [
+    "/images/character/Nobuhiko_Akiyama.png",
+    "/images/character/Sakamoto.png",
+    "/images/character/Wataru_Akiyama.png"
+  ];
+  character[7] = [
+    "/images/character/Kyoko_Iwase.png",
+    "/images/character/Ryosuke_Takahashi.png",
+    "/images/character/Aikawa.png",
+    "/images/character/Ichijo.png"
+  ];
+
+  character.forEach((characterArray) => {
+    if (characterArray.length > 0) {
+      characterArray.forEach((imagePath) => {
+        const img = new Image();
+        img.src = imagePath;
+      });
+    }
+  });
   backgrounds.forEach((imagePath) => {
     const img = new Image();
     img.src = imagePath.replace(/url\(['"](.+)['"]\)/, '$1');
+  });
+  route.forEach((imagePath) => {
+    const img = new Image();
+    img.src = imagePath;
+  });
+  name.forEach((imagePath) => {
+    const img = new Image();
+    img.src = imagePath;
   });
 
   var mySwiper = new Swiper(".swiper-container", {
@@ -77,50 +134,6 @@ $(document).ready(function () {
   }
 
   function updateCharacter(index) {
-    const character = new Array();
-    character[0] = [
-      "/images/character/Itsuki_Takeuchi.png",
-      "/images/character/Kenji.png",
-      "/images/character/Shingo_Shoji.png"
-    ];
-    character[1] = [
-      "/images/character/Toru_Suetsugu.png",
-      "/images/character/Atsuro_Kawai.png",
-      "/images/character/Impact_Blue.png"
-    ];
-    character[2] = [
-      "/images/character/Two_Guys_From_Tokyo.png",
-      "/images/character/Kenta_Nakamura.png",
-      "/images/character/Keisuke_Takahashi.png"
-    ];
-    character[3] = [
-      "/images/character/Koichiro_Iketani.png",
-      "/images/character/Takeshi_Nakazato.png",
-      "/images/character/Kyoichi_Sudo.png",
-      "/images/character/Ryosuke_Takahashi.png",
-      "/images/character/Takumi_Fujiwara.png"
-    ];
-    character[4] = [
-      "/images/character/Seiji_Iwaki.png",
-      "/images/character/Kyoichi_Sudo.png",
-      "/images/character/Kai_Kogashiwa.png"
-    ];
-    character[5] = [
-      "/images/character/Daiki_Ninomiya.png",
-      "/images/character/Smiley_Sakai.png",
-      "/images/character/Tomoyuki_Tachi.png"
-    ];
-    character[6] = [
-      "/images/character/Nobuhiko_Akiyama.png",
-      "/images/character/Sakamoto.png",
-      "/images/character/Wataru_Akiyama.png"
-    ];
-    character[7] = [
-      "/images/character/Kyoko_Iwase.png",
-      "/images/character/Ryosuke_Takahashi.png",
-      "/images/character/Aikawa.png",
-      "/images/character/Ichijo.png"
-    ];
 
     const characterContainer = document.querySelector('.character-container');// 目标容器
 
