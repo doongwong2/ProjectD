@@ -8,39 +8,43 @@ $(document).ready(function () {
   // the stack, needed for correct animation style
 
   const backgrounds = [
-    "url('/images/Map/Mount Myogi.jpg')",
-    "url('/images/Map/Usui Touge.jpg')",
-    "url('/images/Map/Mount Akagi.jpg')",
-    "url('/images/Map/Mount Akina.jpg')",
-    "url('/images/Map/Irohazaka.jpg')",
-    "url('/images/Map/Happogahara.jpg')",
-    "url('/images/Map/Shomaru Pass.jpg')",
-    "url('/images/Map/Tsuchisaka.jpg')"
+    "url('../images/Map/Mount Myogi.jpg')",
+    "url('../images/Map/Usui Touge.jpg')",
+    "url('../images/Map/Mount Akagi.jpg')",
+    "url('../images/Map/Mount Akina.jpg')",
+    "url('../images/Map/Irohazaka.jpg')",
+    "url('../images/Map/Happogahara.jpg')",
+    "url('../images/Map/Shomaru Pass.jpg')",
+    "url('../images/Map/Tsuchisaka.jpg')"
   ];
   const name = [
-    "/images/Name/Mount Myogi.png",
-    "/images/Name/Usui Touge.png",
-    "/images/Name/Mount Akagi.png",
-    "/images/Name/Mount Akina.png",
-    "/images/Name/Irohazaka.png",
-    "/images/Name/Happogahara.png",
-    "/images/Name/Shomaru Pass.png",
-    "/images/Name/Tsuchisaka.png"
+    "../images/Name/Mount Myogi.png",
+    "../images/Name/Usui Touge.png",
+    "../images/Name/Mount Akagi.png",
+    "../images/Name/Mount Akina.png",
+    "../images/Name/Irohazaka.png",
+    "../images/Name/Happogahara.png",
+    "../images/Name/Shomaru Pass.png",
+    "../images/Name/Tsuchisaka.png"
   ];
   const route = [
-    "/images/Route/Mount Myogi.png",
-    "/images/Route/Usui Touge.png",
-    "/images/Route/Mount Akagi.png",
-    "/images/Route/Mount Akina.png",
-    "/images/Route/Irohazaka.png",
-    "/images/Route/Happogahara.png",
-    "/images/Route/Shomaru Pass.png",
-    "/images/Route/Tsuchisaka.png"
+    "../images/Route/Mount Myogi.png",
+    "../images/Route/Usui Touge.png",
+    "../images/Route/Mount Akagi.png",
+    "../images/Route/Mount Akina.png",
+    "../images/Route/Irohazaka.png",
+    "../images/Route/Happogahara.png",
+    "../images/Route/Shomaru Pass.png",
+    "../images/Route/Tsuchisaka.png"
   ];
 
+  // backgrounds.forEach((imagePath) => {
+  //   const img = new Image();
+  //   img.src = imagePath;
+  // });
   backgrounds.forEach((imagePath) => {
     const img = new Image();
-    img.src = imagePath;
+    img.src = imagePath.replace(/url\(['"](.+)['"]\)/, '$1');
   });
 
   var mySwiper = new Swiper(".swiper-container", {
