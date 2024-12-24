@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital@1&display=swap');
 
 @font-face {
-    font-family: "Segment A Key Trial Black", sans-serif;
-    src: url("/font/SegmentAKeyTrial-Black.otf");
+    font-family: "Segment A Key Trial Black";
+    src: url("/font/SegmentAKeyTrial-Black.woff2") format("woff2"),
+         url("/font/SegmentAKeyTrial-Black.woff") format("woff"),
+         url("/font/SegmentAKeyTrial-Black.otf") format("opentype");
 }
 
 .backgroundImg {
