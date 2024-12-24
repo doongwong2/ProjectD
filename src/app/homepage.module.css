@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: "Segment A Key Trial Black", sans-serif;
-    src: url("/font/SegmentAKeyTrial-Black.otf");
+    src: url("../font/SegmentAKeyTrial-Black.otf");
 }
 
 .backgroundImg {
     font-family: "Alumni Sans", sans-serif;
-    background-image: url("/images/Background.png");
+    background-image: url("../images/Background.png");
     background-color: black;
     background-position: center center;
     background-repeat: no-repeat;
