@@ -149,3 +149,8 @@ body {
       transform: rotate(360deg);
   }
 }
+
+nav {
+  position: absolute;
+  top:0px;
+}

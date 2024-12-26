@@ -1,13 +1,15 @@
 // app/posts/[slug]/page.js
 "use client"; // This is needed for client-side rendering.
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState, useRef } from 'react';
 import Comments from '@/components/comments/Comments';
 import AuthLinks from '@/components/authLinks/AuthLinks';
+import Navbar from '@/components/navbar/Navbar';
 import styles from './post.module.css';
 
 const PostPage = () => {
+  const router = useRouter()
   const params = useParams()
   // console.log(params);
 
@@ -38,14 +40,26 @@ const PostPage = () => {
     }
 
     loadPostData();
+
   }, [slug]); // Re-fetch data when the slug changes
+
+
 
   if (loading) return <div>Loading...</div>; // Show loading state
 
-  if (!postData) return <div>No post found</div>; // Show error state if no data
+  if (!postData) return (
+  <div className={styles.container}>
+    <Navbar></Navbar>
+    <img src = "\images\initial-d-takumi-fujiwara-cry-259708911.gif"></img>
+    <br></br>Admin has't cleared this stage yet...
+    </div>
+
+
+  ); // Show error state if no data
 
   return (
     <div>
+      <Navbar></Navbar>
       <div className={styles.container}>
         <h1>{postData.title}</h1>
         <div>

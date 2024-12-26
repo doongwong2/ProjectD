@@ -99,6 +99,14 @@ $(document).ready(function () {
       CarsContainer.appendChild(newDiv);
     }
   }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      mySwiper.slidePrev();
+    }
+    else if (e.key === 'ArrowRight') {
+      mySwiper.slideNext();
+    }
+  })
 
   updateCars(mySwiper.activeIndex);
 });

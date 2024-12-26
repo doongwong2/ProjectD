@@ -160,6 +160,17 @@ $(document).ready(function () {
     }
   }
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      mySwiper.slidePrev();
+    }
+    else if (e.key === 'ArrowRight') {
+      mySwiper.slideNext();
+    }
+  })
+
+
+
   // 初始化
   updateImage(mySwiper.activeIndex);
   updateCharacter(mySwiper.activeIndex);

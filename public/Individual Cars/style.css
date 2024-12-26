@@ -125,3 +125,7 @@ body {
   paint-order: stroke fill;
 }
 
+nav {
+  position: absolute;
+  top:0px;
+}
