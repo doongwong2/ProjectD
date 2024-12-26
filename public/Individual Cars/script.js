@@ -33,6 +33,9 @@ $(document).ready(function () {
     else if (e.key === 'ArrowRight') {
       mySwiper.slideNext();
     }
+    else if (e.key === "x" || e.key === "X") {
+      window.location.href = '/Show Room/index.html';
+    }
   })
 
 });

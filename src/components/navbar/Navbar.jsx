@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-          <nav onContextMenu={handleKeyDown}>
+          <nav>
       <button onClick={() => router.back()}>
         <img src="/images/xButton.png" width = {50} height = {50}></img>
         Back

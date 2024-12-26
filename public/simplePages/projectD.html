@@ -64,4 +64,18 @@
     </tr>
     </table>
 </body>
+<script>
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      mySwiper.slidePrev();
+    }
+    else if (e.key === 'ArrowRight') {
+      mySwiper.slideNext();
+    }
+    else if (e.key === "x" || e.key === "X") {
+      window.location.href = '/';
+    }
+  })
+</script>
 </html>

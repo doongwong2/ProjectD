@@ -7,6 +7,7 @@ import Comments from '@/components/comments/Comments';
 import AuthLinks from '@/components/authLinks/AuthLinks';
 import Navbar from '@/components/navbar/Navbar';
 import styles from './post.module.css';
+import { withMiddleware } from 'swr/_internal';
 
 const PostPage = () => {
   const router = useRouter()
@@ -43,15 +44,25 @@ const PostPage = () => {
 
   }, [slug]); // Re-fetch data when the slug changes
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'X' || e.key === 'x') {
+        router.push("/simplePages/Admin's Guide.html")
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+  })
+
 
 
   if (loading) return <div>Loading...</div>; // Show loading state
 
   if (!postData) return (
-  <div className={styles.container}>
-    <Navbar></Navbar>
-    <img src = "\images\initial-d-takumi-fujiwara-cry-259708911.gif"></img>
-    <br></br>Admin has't cleared this stage yet...
+    <div className={styles.container}>
+      <Navbar></Navbar>
+      <img src="\images\initial-d-takumi-fujiwara-cry-259708911.gif"></img>
+      <br></br>Admin has't cleared this stage yet...
     </div>
 
 

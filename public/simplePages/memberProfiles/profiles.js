@@ -206,7 +206,7 @@ function generateTable(start, end, id) {
 
         // Add the image cell (rowspan = 3)
         const imgCell = document.createElement('td');
-        imgCell.setAttribute('width','5vw');
+        imgCell.setAttribute('width', '5vw');
         imgCell.setAttribute('rowspan', '3');
         const img = document.createElement('img');
         img.setAttribute('src', character.image);
@@ -263,3 +263,15 @@ generateTable(18, 20, "Irohazaka");
 generateTable(21, 23, "Happogahara");
 generateTable(24, 26, "Shomaru");
 generateTable(27, 30, "Tsuchisaka");
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        mySwiper.slidePrev();
+    }
+    else if (e.key === 'ArrowRight') {
+        mySwiper.slideNext();
+    }
+    else if (e.key === "x" || e.key === "X") {
+        window.location.href = '/';
+    }
+})
