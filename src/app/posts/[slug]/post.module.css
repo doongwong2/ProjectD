@@ -167,3 +167,12 @@
     font-family: "Open sans";
 }
 
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .errorImage {
+    margin: 20px 0;
+  }
