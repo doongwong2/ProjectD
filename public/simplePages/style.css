@@ -212,6 +212,8 @@ nav div {
   border-left: 3px solid gray;
   padding-left: 20px;
   /* 添加元素之间的边框 */
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav button:first-child,

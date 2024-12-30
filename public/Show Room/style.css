@@ -16,12 +16,14 @@ body {
   width: 100vw;
   height: 20vh;
   top: 5vh;
-  background: 
+  background:
     linear-gradient(to left, rgba(0, 0, 0, 0.7) 10%, rgba(255, 255, 255, 0.8) 50%, rgba(0, 0, 0, 0.7) 90%),
-    radial-gradient(ellipse, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.6) 80%), 
+    radial-gradient(ellipse, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.6) 80%),
     url("background/swiper background.png");
-  background-size: cover; /* 調整背景圖片的顯示方式 */
-  background-position: center; /* 背景圖片居中 */
+  background-size: cover;
+  /* 調整背景圖片的顯示方式 */
+  background-position: center;
+  /* 背景圖片居中 */
 }
 
 
@@ -93,10 +95,13 @@ body {
 }
 
 .Cars:nth-child(n+4) {
-  margin-left: -5vw; /* Left shift for elements in the second row and beyond */
+  margin-left: -5vw;
+  /* Left shift for elements in the second row and beyond */
 }
+
 .Cars:nth-child(n+7) {
-  margin-left: -10vw; /* Left shift for elements in the second row and beyond */
+  margin-left: -10vw;
+  /* Left shift for elements in the second row and beyond */
 }
 
 .Cars img {
@@ -104,7 +109,7 @@ body {
   margin-top: -5vw;
 }
 
-.Cars img:hover{
+.Cars img:hover {
   cursor: pointer;
 }
 
@@ -142,15 +147,57 @@ body {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 nav {
-  position: absolute;
-  top:0px;
+  position: fixed;
+  top: 0px;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1)),
+    url(../images/carbon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 3px solid gray;
+  box-sizing: border-box;
+}
+
+
+
+nav button,
+nav div {
+  color: orange;
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-left: 3px solid gray;
+  padding-left: 20px;
+  /* 添加元素之间的边框 */
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav button:first-child,
+nav div:first-child {
+  border-left: none;
+  /* 移除第一个元素的左边框 */
+}
+
+nav button :hover {
+  cursor: pointer;
 }

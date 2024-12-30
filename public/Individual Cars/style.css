@@ -16,12 +16,14 @@ body {
   width: 100vw;
   height: 20vh;
   top: 5vh;
-  background: 
+  background:
     radial-gradient(ellipse at center bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.7) 50%),
     linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%),
     url("../Show Room/background/swiper background.png");
-  background-size: cover; /* 調整背景圖片的顯示方式 */
-  background-position: center; /* 背景圖片居中 */ 
+  background-size: cover;
+  /* 調整背景圖片的顯示方式 */
+  background-position: center;
+  /* 背景圖片居中 */
 }
 
 
@@ -47,7 +49,7 @@ body {
   opacity: 1;
   transform: scale(1);
   filter: brightness(1);
-  filter: drop-shadow(0vw 0vw 1vw white) drop-shadow(0vw 0vw 3vw rgba(60,135,255,0.8));
+  filter: drop-shadow(0vw 0vw 1vw white) drop-shadow(0vw 0vw 3vw rgba(60, 135, 255, 0.8));
   /* background: #fc0; */
 }
 
@@ -69,7 +71,7 @@ body {
   margin-left: 10vw;
 }
 
-.cars-container img{
+.cars-container img {
   margin-top: 20vh;
 }
 
@@ -77,7 +79,7 @@ body {
   position: fixed;
   bottom: 2vh;
   right: 0;
-  background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 100%);
   padding: 8px 15px;
   color: white;
   font-family: Arial, sans-serif;
@@ -95,7 +97,8 @@ body {
   position: absolute;
   top: 0;
   left: -5vw;
-  width: 5vw;  /* Width of the cut */
+  width: 5vw;
+  /* Width of the cut */
   height: 100%;
   background: #000;
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0);
@@ -117,7 +120,8 @@ body {
   align-self: stretch;
 }
 
-.transmission, .gear-count {
+.transmission,
+.gear-count {
   color: #fff;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -126,6 +130,48 @@ body {
 }
 
 nav {
-  position: absolute;
-  top:0px;
+  position: fixed;
+  top: 0px;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1)),
+    url(../images/carbon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 3px solid gray;
+  box-sizing: border-box;
+}
+
+
+
+nav button,
+nav div {
+  color: orange;
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-left: 3px solid gray;
+  padding-left: 20px;
+  /* 添加元素之间的边框 */
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav button:first-child,
+nav div:first-child {
+  border-left: none;
+  /* 移除第一个元素的左边框 */
+}
+
+nav button :hover {
+  cursor: pointer;
 }

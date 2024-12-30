@@ -1,12 +1,8 @@
-
 body {
-
-    padding-left: 20px;
     padding-top: 20px;
-    font-family:"Noto Sans TC",sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     background-color: rgb(19, 19, 19);
-    color:white;
-
+    color: white;
 }
 
 img {
@@ -29,7 +25,7 @@ td {
     border: 2px solid white;
 }
 
-a{
+a {
     color: rgb(250, 77, 77);
     text-decoration: none;
 }
@@ -39,6 +35,48 @@ a:hover {
 }
 
 nav {
+    position: fixed;
+    top: 0px;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1)),
+        url(../../images/carbon.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid gray;
+    box-sizing: border-box;
+}
 
-    text-align: center;
-  }
+
+
+nav button,
+nav div {
+    color: orange;
+    display: flex;
+    background: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-left: 3px solid gray;
+    padding-left: 20px;
+    /* 添加元素之间的边框 */
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav button:first-child,
+nav div:first-child {
+    border-left: none;
+    /* 移除第一个元素的左边框 */
+}
+
+nav button :hover {
+    cursor: pointer;
+}
