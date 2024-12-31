@@ -24,7 +24,7 @@ const Navbar = () => {
           />
           Scroll
         </div>
-        <button onClick={() => (window.location.href = '/')}>
+        <button onClick={() => (router.back())}>
           <img 
             src="/images/xButton.png" 
             alt="Back Icon" 
