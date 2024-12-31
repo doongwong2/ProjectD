@@ -17,14 +17,14 @@ const Navbar = () => {
     <div className={styles.container} onKeyDown={handleKeyDown} tabIndex={0}>
       <nav>
         <div>
-          <img 
-            src="/images/Dpad.png" 
-            alt="Dpad Icon" 
-            style={{ height: '40px', width: '40px' }} 
+          <img
+            src="/images/Dpad.png"
+            alt="Dpad Icon"
+            style={{ height: '40px', width: '40px' }}
           />
           Scroll
         </div>
-        <button onClick={() => (router.back())}>
+        <button onClick={() => (window.location.href = '/')}>
           <img 
             src="/images/xButton.png" 
             alt="Back Icon" 
