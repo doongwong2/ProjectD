@@ -168,7 +168,7 @@ $(document).ready(function () {
       mySwiper.slideNext();
     }
     else if (e.key === "x" || e.key === "X") {
-      window.location.href = '/';
+      history.back();
     }
   })
 

@@ -27,8 +27,17 @@ $(document).ready(function () {
     "cars/180SX [RPS13].png"
   ];
   Cars[2] = [
+    "cars/CIVIC SIR II [EG6].png",
+    "cars/CIVIC TYPE R [EK9].png",
+    "cars/INTEGRA TYPE R [DC2].png",
+    "cars/S2000 [AP1].png"
   ];
   Cars[3] = [
+    "cars/LANCER EVO.III [CE9A].png",
+    "cars/LANCER EVO.IV [CN9A].png",
+    "cars/LANCER EVO.V [CP9A].png",
+    "cars/LANCER EVO.VI [CP9A].png",
+    "cars/LANCER EVO.VII [CT9A].png",
   ];
   Cars[4] = [
   ];
@@ -107,9 +116,8 @@ $(document).ready(function () {
       mySwiper.slideNext();
     }
     else if (e.key === "x" || e.key === "X") {
-      window.location.href = '/';
+      history.back();
     }
-
   })
 
   updateCars(mySwiper.activeIndex);

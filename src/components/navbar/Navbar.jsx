@@ -1,20 +1,28 @@
 "use client"
 
-import React from 'react'
-
+import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './navbar.module.css'
 
 const Navbar = () => {
   const router = useRouter();
-  const handleKeyDown = (e) => {
-    if (e.key === 'X' || e.key === 'x') {
-      router.back();
-    }
-  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'X' || e.key === 'x') {
+        router.back();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [router]);
 
   return (
-    <div className={styles.container} onKeyDown={handleKeyDown} tabIndex={0}>
+    <div className={styles.container}>
       <nav>
         <div>
           <img
@@ -24,7 +32,7 @@ const Navbar = () => {
           />
           Scroll
         </div>
-        <button onClick={() => (router.back())}>
+        <button onClick={() => router.back()}>
           <img 
             src="/images/xButton.png" 
             alt="Back Icon" 

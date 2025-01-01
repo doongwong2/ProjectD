@@ -7,9 +7,14 @@ $(document).ready(function () {
   // panning slide stack and the position 'behind'
   // the stack, needed for correct animation style
 
+  // Calculate slidesPerView based on current array length
+  const indexNum = passedIndex % Cars.length;
+  const currentArrayLength = Cars[indexNum].length;
+  const slidesPerView = Math.min(4, currentArrayLength);
+
   var mySwiper = new Swiper(".swiper-container", {
     spaceBetween: 0,
-    slidesPerView: 4,
+    slidesPerView: slidesPerView, // Dynamic slidesPerView
     centeredSlides: false,
     roundLengths: true,
     loop: true,
@@ -24,7 +29,7 @@ $(document).ready(function () {
       }
     }
   });
-  mySwiper.slideTo(passedCarIndex + 4, 0);
+  mySwiper.slideTo(passedCarIndex + slidesPerView, 0);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') {
@@ -34,10 +39,9 @@ $(document).ready(function () {
       mySwiper.slideNext();
     }
     else if (e.key === "x" || e.key === "X") {
-      window.location.href = '/Show Room/index.html';
+      history.back();
     }
   })
-
 });
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -67,8 +71,20 @@ Cars[1] = [
   "../Show Room/cars/SILVIA spec-R [S15].png",
   "../Show Room/cars/180SX [RPS13].png"
 ];
-Cars[2] = [];
-Cars[3] = [];
+Cars[2] = [
+  "../Show Room/cars/CIVIC SIR II [EG6].png",
+  "../Show Room/cars/CIVIC TYPE R [EK9].png",
+  "../Show Room/cars/INTEGRA TYPE R [DC2].png",
+  "../Show Room/cars/S2000 [AP1].png"
+];
+Cars[3] = [
+  "../Show Room/cars/LANCER EVO.III [CE9A].png",
+  "../Show Room/cars/LANCER EVO.IV [CN9A].png",
+  "../Show Room/cars/LANCER EVO.V [CP9A].png",
+  "../Show Room/cars/LANCER EVO.VI [CP9A].png",
+  "../Show Room/cars/LANCER EVO.VII [CT9A].png",
+
+];
 Cars[4] = [];
 
 const CarSpecs = {
@@ -87,6 +103,15 @@ const CarSpecs = {
   'SILVIA K\'s [S14]': { name: 'SILVIA K\'s AERO (S14)', transmission: 'FR', gears: '5速' },
   'SILVIA spec-R [S15]': { name: 'SILVIA spec-R (S15)', transmission: 'FR', gears: '6速' },
   '180SX [RPS13]': { name: '180SX TYPE X (RPS13)', transmission: 'FR', gears: '5速' },
+  'CIVIC SIR II [EG6]': { name: 'CIVIC SIR II (EG6)', transmission: 'FF', gears: '5速' },
+  'CIVIC TYPE R [EK9]': { name: 'CIVIC TYPE R (EK9)', transmission: 'FF', gears: '5速' },
+  'INTEGRA TYPE R [DC2]': { name: 'INTEGRA TYPE R (DC2)', transmission: 'FF', gears: '5速' },
+  'S2000 [AP1]': { name: 'S2000 (AP1)', transmission: 'FR', gears: '6速' },
+  'LANCER EVO.III [CE9A]': { name: 'LANCER GSR EVOLUTION.III (CE9A)', transmission: '4WD', gears: '5速' },
+  'LANCER EVO.IV [CN9A]': { name: 'LANCER RS EVOLUTION.IV (CN9A)', transmission: '4WD', gears: '5速' },
+  'LANCER EVO.V [CP9A]': { name: 'LANCER RS EVOLUTION.V (CP9A)', transmission: '4WD', gears: '5速' },
+  'LANCER EVO.VI [CP9A]': { name: 'LANCER GSR EVOLUTION.VI (CP9A)', transmission: '4WD', gears: '5速' },
+  'LANCER EVO.VII [CT9A]': { name: 'LANCER EVOLUTION.VII GSR (CT9A)', transmission: '4WD', gears: '5速' },
   // Add specs for other cars as needed
 };
 
