@@ -47,7 +47,6 @@ $(document).ready(function () {
     "cars/ROASTER [NA6CE].png",
     "cars/ROASTER [NB8C].png"
   ];
-  //preload
   Cars.forEach((carArray) => {
     if (carArray.length > 0) {
       carArray.forEach((imagePath) => {
