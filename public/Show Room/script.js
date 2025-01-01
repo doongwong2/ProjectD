@@ -37,9 +37,15 @@ $(document).ready(function () {
     "cars/LANCER EVO.IV [CN9A].png",
     "cars/LANCER EVO.V [CP9A].png",
     "cars/LANCER EVO.VI [CP9A].png",
-    "cars/LANCER EVO.VII [CT9A].png",
+    "cars/LANCER EVO.VII [CT9A].png"
   ];
   Cars[4] = [
+    "cars/RX-7 Type R [FD3S].png",
+    "cars/RX-7 SPIRIT R [FD3S].png",
+    "cars/RX-7 ∞ III [FC3S].png",
+    "cars/RX-8 [SE3P].png",
+    "cars/ROASTER [NA6CE].png",
+    "cars/ROASTER [NB8C].png"
   ];
 
   Cars.forEach((carArray) => {
