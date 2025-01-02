@@ -1,6 +1,3 @@
-// profiles.js
-
-// Define the data array
 const characters = [
     {
         image: "../../images/character/Takumi_Fujiwara.png",
@@ -190,21 +187,19 @@ const characters = [
     },
 ];
 
-// Function to generate the table
 function generateTable(start, end, id) {
 
     const table = document.createElement('table');
-    table.setAttribute('border', '1'); // Adding a border to the table
+    table.setAttribute('border', '1');
 
     characterSlice = characters.slice(start, end + 1);
 
     characterSlice.forEach((character) => {
-        // Create rows for each character
+
         const row1 = document.createElement('tr');
         const row2 = document.createElement('tr');
         const row3 = document.createElement('tr');
 
-        // Add the image cell (rowspan = 3)
         const imgCell = document.createElement('td');
         imgCell.setAttribute('width', '5vw');
         imgCell.setAttribute('rowspan', '3');
@@ -216,7 +211,6 @@ function generateTable(start, end, id) {
         const titleStyle = 'width: 3vw; padding: 3px; font-weight: bold;';
         const valueStyle = 'padding: 8px;';
 
-        // Add the "名字" cell and value
         const nameCell = document.createElement('td');
         nameCell.style.cssText = titleStyle;
         nameCell.textContent = "名字";
@@ -225,7 +219,6 @@ function generateTable(start, end, id) {
         nameValueCell.textContent = character.name;
         row1.appendChild(nameValueCell);
 
-        // Add the "車種" cell and value
         const carCell = document.createElement('td');
         carCell.style.cssText = titleStyle;
         carCell.textContent = "車種";
@@ -234,7 +227,6 @@ function generateTable(start, end, id) {
         carValueCell.textContent = character.car;
         row2.appendChild(carValueCell);
 
-        // Add the "説明" cell and value
         const descriptionCell = document.createElement('td');
         descriptionCell.style.cssText = titleStyle;
         descriptionCell.textContent = "説明";
@@ -243,13 +235,11 @@ function generateTable(start, end, id) {
         descriptionValueCell.textContent = character.description;
         row3.appendChild(descriptionValueCell);
 
-        // Append rows to the table
         table.appendChild(row1);
         table.appendChild(row2);
         table.appendChild(row3);
     });
 
-    // Append the table to the container div
     document.getElementById(id).appendChild(table);
 }
 

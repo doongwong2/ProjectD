@@ -1,11 +1,8 @@
 $(document).ready(function () {
-  // Assign some jquery elements we'll need
+
   var $swiper = $(".swiper-container");
-  var $bottomSlide = null; // Slide whose content gets 'extracted' and placed
-  // into a fixed position for animation purposes
-  var $bottomSlideContent = null; // Slide content that gets passed between the
-  // panning slide stack and the position 'behind'
-  // the stack, needed for correct animation style
+  var $bottomSlide = null; 
+  var $bottomSlideContent = null; 
   const Cars = new Array();
   Cars[0] = [
     "cars/TURENO [AE86].png",
@@ -78,26 +75,23 @@ $(document).ready(function () {
 
     const CarsContainer = document.querySelector('.cars-container');// 目标容器
 
-    CarsContainer.innerHTML = ''; // Clear existing content
+    CarsContainer.innerHTML = '';
     const indexNum = index % Cars.length;
-    // Loop through the corresponding image array
+
     const images = Cars[indexNum];
     for (let i = 0; i < Cars[indexNum].length; i++) {
-      // Create a new container div
+
       const newDiv = document.createElement('div');
       newDiv.classList.add('Cars');
       newDiv.id = `cars${i + 1}`;
 
-      // Extract car name from the file name
       const carNameMatch = images[i].match(/cars\/(.*)\.png/);
       const carName = carNameMatch ? carNameMatch[1] : 'Unknown';
 
-      // Create a label for the car name
       const newLabel = document.createElement('div');
       newLabel.classList.add('CarLabel');
       newLabel.textContent = carName;
 
-      // Create the image element
       const newImg = document.createElement('img');
       newImg.src = images[i];
 
@@ -106,7 +100,6 @@ $(document).ready(function () {
         window.location.href = `../Individual Cars/index.html?Index=${index}&carIndex=${carIndex}`;
       });
 
-      // Append the label and image to the container
       newDiv.appendChild(newLabel);
       newDiv.appendChild(newImg);
 

@@ -33,14 +33,6 @@ const PostPage = () => {
     loadPostData();
   }, [slug]);
 
-  // useEffect(() => {
-  //   const handleKeyDown = (e) => {
-  //     if (e.key === 'X' || e.key === 'x') {
-  //       router.back();
-  //     }
-  //   }
-  //   window.addEventListener('keydown', handleKeyDown);
-  // })
 
   return (
     <div className={styles.pageWrapper}>
